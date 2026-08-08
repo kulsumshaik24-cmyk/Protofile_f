@@ -47,9 +47,9 @@ export default function Navbar({ activeTab, setActiveTab }) {
         {isOpen ? '✕' : '☰'}
       </button>
 
-      {/* Mobile Dropdown Menu Drawer (Matches your exact screenshot design) */}
+      {/* Mobile Dropdown Menu Drawer */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-[#080b14]/95 backdrop-blur-xl border-b border-purple-900/50 shadow-2xl flex flex-col p-6 md:hidden z-40 gap-3 animate-in slide-in-from-top duration-200">
+        <div className="absolute top-full left-0 w-full bg-[#080b14]/95 backdrop-blur-xl border-b border-purple-900/50 shadow-2xl flex flex-col p-6 md:hidden z-40 gap-3">
           {navLinks.map((link) => {
             const isActive = activeTab === link.id;
             return (
