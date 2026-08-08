@@ -378,7 +378,7 @@ export default function Portfolio() {
           </div>
         )}
 
-        {/* SKILLS VIEW (With Colorful Official Brand Logos) */}
+        {/* SKILLS VIEW (Explicitly Colored Logos) */}
         {activeTab === 'skills' && (
           <div className="bg-[#0e1322] border border-purple-900/40 rounded-3xl p-10 md:p-12 shadow-[0_0_30px_rgba(147,51,234,0.1)] max-w-6xl mx-auto w-full flex flex-col gap-10">
             <div>
@@ -389,15 +389,15 @@ export default function Portfolio() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
                 {[
-                  { name: 'HTML5', desc: 'Semantic markup & layout structure', level: '90%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg' },
-                  { name: 'CSS3', desc: 'Styling, flexbox, grid & animations', level: '88%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/css3.svg' },
-                  { name: 'JavaScript', desc: 'Dynamic client-side scripting', level: '85%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg' },
-                  { name: 'Python', desc: 'Core logic, scripting & backend logic', level: '90%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg' },
-                  { name: 'C Programming', desc: 'Foundational programming & algorithms', level: '90%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/c.svg' },
-                  { name: 'Java', desc: 'Object-oriented programming', level: '85%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/openjdk.svg' },
-                  { name: 'SQL', desc: 'Relational database management', level: '85%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg' },
-                  { name: 'MERN Stack', desc: 'MongoDB, Express, React, Node.js', level: '85%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/react.svg' },
-                  { name: 'Generative AI', desc: 'AI models, prompt engineering & APIs', level: '85%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/openai.svg' }
+                  { name: 'HTML5', desc: 'Semantic markup & layout structure', level: '90%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg', color: '#E34F26' },
+                  { name: 'CSS3', desc: 'Styling, flexbox, grid & animations', level: '88%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/css3.svg', color: '#1572B6' },
+                  { name: 'JavaScript', desc: 'Dynamic client-side scripting', level: '85%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg', color: '#F7DF1E' },
+                  { name: 'Python', desc: 'Core logic, scripting & backend logic', level: '90%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg', color: '#3776AB' },
+                  { name: 'C Programming', desc: 'Foundational programming & algorithms', level: '90%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/c.svg', color: '#A8B9CC' },
+                  { name: 'Java', desc: 'Object-oriented programming', level: '85%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/openjdk.svg', color: '#ED8B00' },
+                  { name: 'SQL', desc: 'Relational database management', level: '85%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg', color: '#4479A1' },
+                  { name: 'MERN Stack', desc: 'MongoDB, Express, React, Node.js', level: '85%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/react.svg', color: '#61DAFB' },
+                  { name: 'Generative AI', desc: 'AI models, prompt engineering & APIs', level: '85%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/openai.svg', color: '#412991' }
                 ].map((skill, index) => (
                   <div key={index} className="bg-[#131b2e] border border-purple-950/80 rounded-2xl p-5 flex flex-col justify-between shadow-md">
                     <div>
@@ -413,7 +413,7 @@ export default function Portfolio() {
                       <p className="text-xs text-slate-400 mb-4">{skill.desc}</p>
                     </div>
                     <div className="w-full bg-slate-900 h-1.5 rounded-full overflow-hidden">
-                      <div className="bg-gradient-to-r from-purple-500 to-indigo-500 h-full rounded-full" style={{ width: skill.level }}></div>
+                      <div className="h-full rounded-full" style={{ width: skill.level, backgroundColor: skill.color }}></div>
                     </div>
                   </div>
                 ))}
