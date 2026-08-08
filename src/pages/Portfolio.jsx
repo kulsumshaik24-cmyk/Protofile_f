@@ -196,36 +196,36 @@ export default function Portfolio() {
                   <p>🚀 <strong className="text-slate-300">Currently Exploring:</strong> Full-Stack Development, Artificial Intelligence, and Machine Learning</p>
                 </div>
 
-                {/* Social Media Logos Section with Official Full-Color Badges */}
+                {/* Social Media Logos Section with Guaranteed Visibility */}
                 <div className="flex items-center gap-4 mt-6">
                   <a 
                     href="https://github.com/kulsumshaik24-cmyk" 
                     target="_blank" 
                     rel="noreferrer" 
-                    className="w-10 h-10 rounded-xl bg-[#131b2e] border border-purple-500/30 hover:border-purple-400 flex items-center justify-center p-2.5 transition-all duration-300 hover:scale-110 shadow-md group"
+                    className="w-10 h-10 rounded-xl bg-[#131b2e] border border-purple-500/30 hover:border-purple-400 flex items-center justify-center p-2.5 transition-all duration-300 hover:scale-110 shadow-md"
                     title="GitHub Profile"
                   >
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" className="w-full h-full group-hover:scale-105" style={{ filter: 'invert(1)' }} />
+                    <svg className="w-full h-full fill-white" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                   </a>
 
                   <a 
                     href="https://www.linkedin.com/in/kulsum-shaik-a19276345/" 
                     target="_blank" 
                     rel="noreferrer" 
-                    className="w-10 h-10 rounded-xl bg-[#131b2e] border border-purple-500/30 hover:border-purple-400 flex items-center justify-center p-2.5 transition-all duration-300 hover:scale-110 shadow-md group"
+                    className="w-10 h-10 rounded-xl bg-[#131b2e] border border-purple-500/30 hover:border-purple-400 flex items-center justify-center p-2.5 transition-all duration-300 hover:scale-110 shadow-md"
                     title="LinkedIn Profile"
                   >
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" className="w-full h-full" style={{ filter: 'invert(22%) sepia(98%) saturate(7460%) hue-rotate(202deg) brightness(97%) contrast(101%)' }} />
+                    <svg className="w-full h-full fill-[#0A66C2]" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                   </a>
 
                   <a 
                     href="https://www.codechef.com/users/bask_moles_15" 
                     target="_blank" 
                     rel="noreferrer" 
-                    className="w-10 h-10 rounded-xl bg-[#131b2e] border border-purple-500/30 hover:border-purple-400 flex items-center justify-center p-2.5 transition-all duration-300 hover:scale-110 shadow-md group"
+                    className="w-10 h-10 rounded-xl bg-[#131b2e] border border-purple-500/30 hover:border-purple-400 flex items-center justify-center p-2.5 transition-all duration-300 hover:scale-110 shadow-md"
                     title="CodeChef Profile"
                   >
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/codechef.svg" alt="CodeChef" className="w-full h-full" style={{ filter: 'invert(52%) sepia(85%) saturate(464%) hue-rotate(345deg) brightness(94%) contrast(92%)' }} />
+                    <svg className="w-full h-full fill-[#5B4636]" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.45 16.55c-1.125 1.125-2.95 1.125-4.075 0l-4.075-4.075c-1.125-1.125-1.125-2.95 0-4.075 1.125-1.125 2.95-1.125 4.075 0l.975.975 1.05-1.05-.975-.975c-1.688-1.688-4.412-1.688-6.1 0-1.688 1.688-1.688 4.412 0 6.1l4.075 4.075c1.688 1.688 4.412 1.688 6.1 0l.975-.975-1.05-1.05-.975.975z"/></svg>
                   </a>
                 </div>
 
@@ -378,7 +378,7 @@ export default function Portfolio() {
           </div>
         )}
 
-        {/* SKILLS VIEW (With Official Full-Color Brand Logos & Filters) */}
+        {/* SKILLS VIEW (Using Direct Inline SVGs with Official Colors) */}
         {activeTab === 'skills' && (
           <div className="bg-[#0e1322] border border-purple-900/40 rounded-3xl p-10 md:p-12 shadow-[0_0_30px_rgba(147,51,234,0.1)] max-w-6xl mx-auto w-full flex flex-col gap-10">
             <div>
@@ -393,73 +393,64 @@ export default function Portfolio() {
                     name: 'HTML5', 
                     desc: 'Semantic markup & layout structure', 
                     level: '90%', 
-                    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg', 
                     color: '#E34F26',
-                    filter: 'invert(37%) sepia(87%) saturate(2250%) hue-rotate(345deg) brightness(97%) contrast(93%)' 
+                    svg: <svg className="w-full h-full fill-[#E34F26]" viewBox="0 0 24 24"><path d="M1.5 0h21l-1.91 21.563L12 24l-8.59-2.437L1.5 0zm18.356 3.193H4.144l1.458 16.452L12 21.43l6.398-1.785 1.458-16.452zM8.344 9.176l.128 1.453h7.056l-.262 2.946H8.53l.178 1.996h5.81l-.317 3.518-2.201.611-2.201-.611-.14-1.574H7.49l.27 3.036L12 20.08l4.24-1.176.58-6.524H8.924l-.15-1.688h7.452l.273-3.036H8.344z"/></svg>
                   },
                   { 
                     name: 'CSS3', 
                     desc: 'Styling, flexbox, grid & animations', 
                     level: '88%', 
-                    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/css3.svg', 
                     color: '#1572B6',
-                    filter: 'invert(35%) sepia(93%) saturate(1471%) hue-rotate(182deg) brightness(96%) contrast(94%)' 
+                    svg: <svg className="w-full h-full fill-[#1572B6]" viewBox="0 0 24 24"><path d="M1.5 0h21l-1.91 21.563L12 24l-8.59-2.437L1.5 0zm18.356 3.193H4.144l1.458 16.452L12 21.43l6.398-1.785 1.458-16.452zM16.85 7.426l-.116 1.306H8.624l.115 1.288h7.973l-.534 5.992-4.208 1.168-4.208-1.168-.266-2.986h1.568l.156 1.734 2.75.764 2.75-.764.332-3.728H7.132L6.68 6.138h10.612l-.442 1.288z"/></svg>
                   },
                   { 
                     name: 'JavaScript', 
                     desc: 'Dynamic client-side scripting', 
                     level: '85%', 
-                    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg', 
                     color: '#F7DF1E',
-                    filter: 'invert(87%) sepia(43%) saturate(1312%) hue-rotate(352deg) brightness(102%) contrast(97%)' 
+                    svg: <svg className="w-full h-full fill-[#F7DF1E]" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z"/><path d="M3 3h18v18H3V3zm14.54 13.97c-.36-.61-.98-1.03-1.89-1.25-.66-.17-1.11-.31-1.35-.42-.31-.14-.51-.33-.6-.58-.09-.26-.09-.54 0-.85.12-.39.38-.7.78-.93.4-.23.9-.35 1.51-.35.59 0 1.09.11 1.5.34.42.22.71.55.87.98l-1.34.56c-.11-.27-.29-.47-.54-.6-.25-.13-.56-.2-.93-.2-.36 0-.64.07-.85.22-.21.15-.31.36-.31.64 0 .2.07.37.21.52.14.15.38.3.72.46l.87.39c.89.4 1.34.98 1.34 1.74 0 .42-.14.79-.42 1.11-.28.32-.67.56-1.17.72-.5.16-1.07.24-1.71.24-.76 0-1.4-.13-1.93-.38-.53-.26-.92-.62-1.18-1.09l1.28-.62c.22.38.52.68.91.91.39.23.86.35 1.41.35.43 0 .81-.07 1.15-.22.34-.15.59-.37.75-.66.16-.29.24-.62.24-.99 0-.27-.05-.52-.16-.76zM10.74 15.6h-1.87v-5.2h1.87v5.2z"/></svg>
                   },
                   { 
                     name: 'Python', 
                     desc: 'Core logic, scripting & backend logic', 
                     level: '90%', 
-                    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg', 
                     color: '#3776AB',
-                    filter: 'invert(40%) sepia(51%) saturate(735%) hue-rotate(176deg) brightness(93%) contrast(91%)' 
+                    svg: <svg className="w-full h-full fill-[#3776AB]" viewBox="0 0 24 24"><path d="M11.916 0c-3.132 0-5.832 1.764-5.832 4.14v1.8h5.832v.9H4.152C1.86 6.84 0 8.76 0 11.22s1.86 4.38 4.152 4.38h1.68V13.8c0-2.376 2.052-4.32 4.584-4.32h5.832c2.292 0 4.152-1.92 4.152-4.38S22.476.78 20.184.78h-8.268zm-3.324 2.16a1.08 1.08 0 110 2.16 1.08 1.08 0 010-2.16zm7.236 11.16h-5.832v-.9h7.764c2.292 0 4.152-1.92 4.152-4.38s-1.86-4.38-4.152-4.38h-1.68v1.8c0 2.376-2.052 4.32-4.584 4.32H3.924C1.632 9.9 0 11.82 0 14.28s1.632 4.38 3.924 4.38h8.268c3.132 0 5.832-1.764 5.832-4.14v-1.8zM15.42 21.84a1.08 1.08 0 110-2.16 1.08 1.08 0 010 2.16z"/></svg>
                   },
                   { 
                     name: 'C Programming', 
                     desc: 'Foundational programming & algorithms', 
                     level: '90%', 
-                    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/c.svg', 
                     color: '#A8B9CC',
-                    filter: 'invert(75%) sepia(11%) saturate(738%) hue-rotate(172deg) brightness(91%) contrast(89%)' 
+                    svg: <svg className="w-full h-full fill-[#A8B9CC]" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.27 16.516c-1.332.96-2.934 1.484-4.632 1.484-4.418 0-8-3.582-8-8s3.582-8 8-8c1.698 0 3.3.524 4.632 1.484l-1.074 1.632C13.916 5.568 12.502 5.2 11.07 5.2c-3.766 0-6.83 3.064-6.83 6.83s3.064 6.83 6.83 6.83c1.432 0 2.846-.368 4.126-1.016l1.074 1.632z"/></svg>
                   },
                   { 
                     name: 'Java', 
                     desc: 'Object-oriented programming', 
                     level: '85%', 
-                    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/openjdk.svg', 
                     color: '#ED8B00',
-                    filter: 'invert(53%) sepia(88%) saturate(1512%) hue-rotate(1deg) brightness(99%) contrast(98%)' 
+                    svg: <svg className="w-full h-full fill-[#ED8B00]" viewBox="0 0 24 24"><path d="M10.153 14.63c-.457.172-.943.26-1.442.261-2.164 0-3.92-1.755-3.92-3.92 0-.256.027-.506.077-.751l-1.488-.503c-.09.412-.137.839-.138 1.274 0 2.99 2.428 5.419 5.419 5.419.824 0 1.606-.184 2.308-.512l-.746-.776zm-1.89-13.63c-3.136 0-5.748 2.29-6.243 5.31l1.488.503c.421-2.483 2.56-4.347 5.107-4.347 2.062 0 3.845 1.218 4.697 2.977l1.354-.707C13.882 1.83 11.17 1 8.263 1zM20.211 11.83c-.02-.455-.078-.9-.171-1.332l-1.444.407c.07.32.112.652.124.992.052 1.48-.485 2.898-1.47 3.965-1.025 1.11-2.463 1.758-3.992 1.825l.044 1.5c1.862-.078 3.65-.838 4.965-2.262 1.35-1.468 1.984-3.473 1.944-5.095zm-3.058-8.15c-.934-.693-2.072-1.077-3.238-1.107l-.05 1.5c.915.024 1.81.334 2.548.88l.74-.973z"/></svg>
                   },
                   { 
                     name: 'SQL', 
                     desc: 'Relational database management', 
                     level: '85%', 
-                    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg', 
                     color: '#4479A1',
-                    filter: 'invert(42%) sepia(48%) saturate(543%) hue-rotate(172deg) brightness(93%) contrast(92%)' 
+                    svg: <svg className="w-full h-full fill-[#4479A1]" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 3.582 0 8s5.373 8 12 8 12-3.582 12-8-5.373-8-12-8zm0 14c-4.418 0-8-2.686-8-6s3.582-6 8-6 8 2.686 8 6-3.582 6-8 6zm0-10c-3.314 0-6 1.343-6 3s2.686 3 6 3 6-1.343 6-3-2.686-3-6-3z"/></svg>
                   },
                   { 
                     name: 'MERN Stack', 
                     desc: 'MongoDB, Express, React, Node.js', 
                     level: '85%', 
-                    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/react.svg', 
                     color: '#61DAFB',
-                    filter: 'invert(79%) sepia(40%) saturate(1915%) hue-rotate(159deg) brightness(101%) contrast(97%)' 
+                    svg: <svg className="w-full h-full fill-[#61DAFB]" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 4.5c4.142 0 7.5 3.358 7.5 7.5s-3.358 7.5-7.5 7.5S4.5 16.142 4.5 12 7.858 4.5 12 4.5zm0 2.5a5 5 0 100 10 5 5 0 000-10z"/></svg>
                   },
                   { 
                     name: 'Generative AI', 
                     desc: 'AI models, prompt engineering & APIs', 
                     level: '85%', 
-                    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/openai.svg', 
                     color: '#412991',
-                    filter: 'invert(20%) sepia(74%) saturate(2250%) hue-rotate(240deg) brightness(89%) contrast(94%)' 
+                    svg: <svg className="w-full h-full fill-[#8A2BE2]" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
                   }
                 ].map((skill, index) => (
                   <div key={index} className="bg-[#131b2e] border border-purple-950/80 rounded-2xl p-5 flex flex-col justify-between shadow-md">
@@ -467,7 +458,7 @@ export default function Portfolio() {
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-3">
                           <div className="w-9 h-9 rounded-xl bg-[#080b14] border border-purple-500/20 flex items-center justify-center p-2 shadow-sm">
-                            <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain" style={{ filter: skill.filter }} />
+                            {skill.svg}
                           </div>
                           <h4 className="font-bold text-white text-sm">{skill.name}</h4>
                         </div>
@@ -877,22 +868,22 @@ export default function Portfolio() {
             {/* Bottom Section: Find Me Online & Quote / Quick Response Cards */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
               
-              {/* Find Me Online Box (With Official Full-Color Brand Logos) */}
+              {/* Find Me Online Box (With Official Full-Color Inline SVGs) */}
               <div className="lg:col-span-5 bg-[#131b2e] border border-purple-950/80 rounded-2xl p-6 shadow-xl">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-purple-400 block mb-4">FIND ME ONLINE</span>
                 <div className="flex items-center gap-3">
                   <a href="https://github.com/kulsumshaik24-cmyk" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-xl bg-[#080b14] border border-purple-950 hover:border-purple-500/50 flex flex-col items-center justify-center p-2 transition group" title="GitHub">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" className="w-5 h-5 group-hover:scale-110 transition" style={{ filter: 'invert(1)' }} />
+                    <svg className="w-5 h-5 fill-white group-hover:scale-110 transition" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                     <span className="text-[9px] text-slate-400 mt-1">GitHub</span>
                   </a>
 
                   <a href="https://www.linkedin.com/in/kulsum-shaik-a19276345/" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-xl bg-[#080b14] border border-purple-950 hover:border-purple-500/50 flex flex-col items-center justify-center p-2 transition group" title="LinkedIn">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" className="w-5 h-5 group-hover:scale-110 transition" style={{ filter: 'invert(22%) sepia(98%) saturate(7460%) hue-rotate(202deg) brightness(97%) contrast(101%)' }} />
+                    <svg className="w-5 h-5 fill-[#0A66C2] group-hover:scale-110 transition" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                     <span className="text-[9px] text-slate-400 mt-1">LinkedIn</span>
                   </a>
 
                   <a href="https://www.codechef.com/users/bask_moles_15" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-xl bg-[#080b14] border border-purple-950 hover:border-purple-500/50 flex flex-col items-center justify-center p-2 transition group" title="CodeChef">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/codechef.svg" alt="CodeChef" className="w-5 h-5 group-hover:scale-110 transition" style={{ filter: 'invert(52%) sepia(85%) saturate(464%) hue-rotate(345deg) brightness(94%) contrast(92%)' }} />
+                    <svg className="w-5 h-5 fill-[#5B4636] group-hover:scale-110 transition" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.45 16.55c-1.125 1.125-2.95 1.125-4.075 0l-4.075-4.075c-1.125-1.125-1.125-2.95 0-4.075 1.125-1.125 2.95-1.125 4.075 0l.975.975 1.05-1.05-.975-.975c-1.688-1.688-4.412-1.688-6.1 0-1.688 1.688-1.688 4.412 0 6.1l4.075 4.075c1.688 1.688 4.412 1.688 6.1 0l.975-.975-1.05-1.05-.975.975z"/></svg>
                     <span className="text-[9px] text-slate-400 mt-1">CodeChef</span>
                   </a>
 
