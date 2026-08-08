@@ -6,6 +6,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
   const navLinks = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
+    { id: 'education', label: 'Education' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     { id: 'experience', label: 'Experience' },
@@ -15,7 +16,12 @@ export default function Navbar({ activeTab, setActiveTab }) {
 
   return (
     <nav className="flex justify-between items-center px-6 md:px-10 py-5 bg-[#0e1322] border-b border-purple-950/50 sticky top-0 z-50">
-      <div className="text-purple-400 font-bold text-lg">&lt;/&gt; Kulsum Shaik</div>
+      
+      {/* Brand Logo */}
+      <div className="flex items-center gap-2 text-white font-bold text-lg tracking-wide">
+        <span className="p-1.5 rounded-xl bg-purple-950/60 border border-purple-800/40 text-purple-400 text-xs">&lt;/&gt;</span> 
+        <span>Kusnuth<span className="text-purple-500">.</span></span>
+      </div>
       
       {/* Desktop Navigation Links */}
       <div className="hidden md:flex gap-6 text-sm text-gray-300">
@@ -23,7 +29,9 @@ export default function Navbar({ activeTab, setActiveTab }) {
           <button
             key={link.id}
             onClick={() => setActiveTab(link.id)}
-            className={`hover:text-purple-400 transition uppercase tracking-wider ${activeTab === link.id ? 'text-purple-400 font-bold border-b-2 border-purple-500 pb-1' : ''}`}
+            className={`hover:text-purple-400 transition uppercase tracking-wider text-xs font-medium ${
+              activeTab === link.id ? 'text-purple-400 font-bold border-b-2 border-purple-500 pb-1' : ''
+            }`}
           >
             {link.label}
           </button>
@@ -33,27 +41,34 @@ export default function Navbar({ activeTab, setActiveTab }) {
       {/* Mobile Hamburger Button */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden w-10 h-10 rounded-xl bg-purple-950/60 border border-purple-800/40 text-purple-300 flex items-center justify-center text-xl transition focus:outline-none"
+        className="md:hidden w-10 h-10 rounded-2xl bg-purple-950/60 border border-purple-800/40 text-purple-300 flex items-center justify-center text-lg transition focus:outline-none shadow-md"
         aria-label="Toggle Menu"
       >
         {isOpen ? '✕' : '☰'}
       </button>
 
-      {/* Mobile Dropdown Menu Drawer */}
+      {/* Mobile Dropdown Menu Drawer (Matches your exact screenshot design) */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-[#0e1322] border-b border-purple-900/50 shadow-2xl flex flex-col py-4 px-6 md:hidden z-40">
-          {navLinks.map((link) => (
-            <button
-              key={link.id} 
-              onClick={() => {
-                setActiveTab(link.id);
-                setIsOpen(false);
-              }}
-              className={`text-left py-3 text-xs uppercase tracking-wider transition ${activeTab === link.id ? 'text-purple-400 font-bold' : 'text-gray-300 hover:text-purple-400'}`}
-            >
-              {link.label}
-            </button>
-          ))}
+        <div className="absolute top-full left-0 w-full bg-[#080b14]/95 backdrop-blur-xl border-b border-purple-900/50 shadow-2xl flex flex-col p-6 md:hidden z-40 gap-3 animate-in slide-in-from-top duration-200">
+          {navLinks.map((link) => {
+            const isActive = activeTab === link.id;
+            return (
+              <button
+                key={link.id} 
+                onClick={() => {
+                  setActiveTab(link.id);
+                  setIsOpen(false);
+                }}
+                className={`text-left py-3 px-5 rounded-2xl text-sm font-medium transition ${
+                  isActive 
+                    ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-[0_0_20px_rgba(147,51,234,0.4)] font-bold' 
+                    : 'text-gray-300 hover:bg-purple-950/40 hover:text-white'
+                }`}
+              >
+                {link.label}
+              </button>
+            );
+          })}
         </div>
       )}
     </nav>
