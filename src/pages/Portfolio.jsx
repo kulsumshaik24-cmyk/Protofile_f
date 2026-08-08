@@ -68,7 +68,44 @@ export default function Portfolio() {
         const uniqueProjects = Array.from(
           new Map(res.data.map(proj => [proj.title, proj])).values()
         );
-        setProjects(uniqueProjects);
+        
+        // Ensure accurate direct links for specific projects
+        const updatedProjects = uniqueProjects.map(proj => {
+          if (proj.title && proj.title.toLowerCase().includes('volunteer')) {
+            return {
+              ...proj,
+              githubLink: 'https://github.com/kulsumshaik24-cmyk/volunteer-connect-prototype.git',
+              liveLink: 'https://kulsumshaik24-cmyk.github.io/volunteer-connect-prototype/'
+            };
+          }
+          if (proj.title && proj.title.toLowerCase().includes('chatbot')) {
+            return {
+              ...proj,
+              githubLink: 'https://github.com/kulsumshaik24-cmyk/cognevance_AIChatbotUsingNLP.git'
+            };
+          }
+          if (proj.title && proj.title.toLowerCase().includes('predictive')) {
+            return {
+              ...proj,
+              githubLink: 'https://github.com/kulsumshaik24-cmyk/cognevance_PredictiveAnalytics.git'
+            };
+          }
+          if (proj.title && proj.title.toLowerCase().includes('movie')) {
+            return {
+              ...proj,
+              githubLink: 'https://github.com/kulsumshaik24-cmyk/cognevance_MovieRecommendationSystem.git'
+            };
+          }
+          if (proj.title && proj.title.toLowerCase().includes('colab')) {
+            return {
+              ...proj,
+              liveLink: 'https://colab.research.google.com/drive/1QRSxLBsXwBQFJPeqSW_wRRq2qa9kDPnG?usp=sharing'
+            };
+          }
+          return proj;
+        });
+
+        setProjects(updatedProjects);
       })
       .catch(err => console.log(err));
   };
@@ -196,7 +233,7 @@ export default function Portfolio() {
                   <p>🚀 <strong className="text-slate-300">Currently Exploring:</strong> Full-Stack Development, Artificial Intelligence, and Machine Learning</p>
                 </div>
 
-                {/* Social Media Logos Section with Guaranteed Visibility */}
+                {/* Social Media Logos Section */}
                 <div className="flex items-center gap-4 mt-6">
                   <a 
                     href="https://github.com/kulsumshaik24-cmyk" 
@@ -235,7 +272,7 @@ export default function Portfolio() {
                 </div>
               </div>
               
-              {/* Profile Image Container with Interactive Floating Badges */}
+              {/* Profile Image Container */}
               <div className="relative flex items-center justify-center p-6 z-10">
                 <div className="absolute w-72 h-72 rounded-full border border-purple-500/20 animate-ping duration-1000"></div>
                 <div className="absolute w-80 h-80 rounded-full border border-indigo-500/10"></div>
@@ -244,7 +281,6 @@ export default function Portfolio() {
                   <img src="/profile.jpg" alt="Shaik Kulsum" className="w-full h-full rounded-full object-cover border-4 border-[#0e1322]" />
                 </div>
 
-                {/* Status Badge (Top Right) */}
                 <div className="absolute -top-2 right-2 sm:right-6 bg-[#131b2e]/90 border border-purple-500/40 backdrop-blur-md px-4 py-2 rounded-2xl shadow-xl flex items-center gap-2.5 z-20 animate-bounce duration-1000">
                   <span className="w-7 h-7 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 text-xs">⚡</span>
                   <div>
@@ -253,7 +289,6 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                {/* Focus Badge (Bottom Left) */}
                 <div className="absolute -bottom-2 left-2 sm:left-6 bg-[#131b2e]/90 border border-purple-500/40 backdrop-blur-md px-4 py-2 rounded-2xl shadow-xl flex items-center gap-2.5 z-20">
                   <span className="w-7 h-7 rounded-xl bg-purple-500/20 border border-purple-500/40 flex items-center justify-center text-purple-400 text-xs">💻</span>
                   <div>
@@ -378,7 +413,7 @@ export default function Portfolio() {
           </div>
         )}
 
-        {/* SKILLS VIEW (Using Direct Inline SVGs with Official Colors) */}
+        {/* SKILLS VIEW */}
         {activeTab === 'skills' && (
           <div className="bg-[#0e1322] border border-purple-900/40 rounded-3xl p-10 md:p-12 shadow-[0_0_30px_rgba(147,51,234,0.1)] max-w-6xl mx-auto w-full flex flex-col gap-10">
             <div>
@@ -511,9 +546,9 @@ export default function Portfolio() {
             <div className="flex justify-between items-center mb-8">
               <div>
                 <h3 className="text-2xl md:text-3xl font-extrabold text-white flex items-center gap-2">⭐ FEATURED PROJECTS</h3>
-                <p className="text-xs text-slate-400 mt-1">Showing database-synced solutions</p>
+                <p className="text-xs text-slate-400 mt-1">Showing fully linked project cards</p>
               </div>
-              <span className="text-xs text-purple-400 bg-purple-950/50 border border-purple-800/40 px-3 py-1 rounded-full">Database Synced</span>
+              <span className="text-xs text-purple-400 bg-purple-950/50 border border-purple-800/40 px-3 py-1 rounded-full">Updated Links</span>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -535,24 +570,27 @@ export default function Portfolio() {
                   </div>
                   
                   <div className="flex gap-2 pt-3 border-t border-purple-950/80 flex-wrap">
-                    {project.title && project.title.includes('MERN Stack') ? (
+                    {/* Render buttons according to project specification */}
+                    {project.title && project.title.toLowerCase().includes('mern') ? (
                       <>
                         <a href={project.frontendLink || '#'} target="_blank" rel="noreferrer" className="flex-1 bg-[#0e1322] hover:bg-purple-950/50 text-center text-xs py-2 rounded-xl text-purple-300 border border-purple-900/50 transition">Frontend</a>
                         <a href={project.backendLink || '#'} target="_blank" rel="noreferrer" className="flex-1 bg-[#0e1322] hover:bg-purple-950/50 text-center text-xs py-2 rounded-xl text-purple-300 border border-purple-900/50 transition">Backend</a>
                       </>
-                    ) : project.title && project.title.includes('GenAI') ? (
-                      <a href={project.backendLink || project.githubLink || '#'} target="_blank" rel="noreferrer" className="flex-1 bg-[#0e1322] hover:bg-purple-950/50 text-center text-xs py-2 rounded-xl text-purple-300 border border-purple-900/50 transition">Google Colab</a>
-                    ) : project.title && (project.title.includes('Movie Recommendation') || project.title.includes('AI Chatbot') || project.title.includes('Predictive Analytics')) ? (
-                      <a href={project.githubLink || project.backendLink || '#'} target="_blank" rel="noreferrer" className="flex-1 bg-[#0e1322] hover:bg-purple-950/50 text-center text-xs py-2 rounded-xl text-purple-300 border border-purple-900/50 transition">GitHub</a>
+                    ) : project.title && project.title.toLowerCase().includes('volunteer') ? (
+                      <a href={project.githubLink} target="_blank" rel="noreferrer" className="flex-1 bg-[#0e1322] hover:bg-purple-950/50 text-center text-xs py-2 rounded-xl text-purple-300 border border-purple-900/50 transition">GitHub</a>
+                    ) : project.title && (project.title.toLowerCase().includes('chatbot') || project.title.toLowerCase().includes('predictive') || project.title.toLowerCase().includes('movie')) ? (
+                      <a href={project.githubLink} target="_blank" rel="noreferrer" className="flex-1 bg-[#0e1322] hover:bg-purple-950/50 text-center text-xs py-2 rounded-xl text-purple-300 border border-purple-900/50 transition">GitHub</a>
                     ) : project.githubLink ? (
                       <a href={project.githubLink} target="_blank" rel="noreferrer" className="flex-1 bg-[#0e1322] hover:bg-purple-950/50 text-center text-xs py-2 rounded-xl text-purple-300 border border-purple-900/50 transition">GitHub</a>
-                    ) : project.backendLink ? (
-                      <a href={project.backendLink} target="_blank" rel="noreferrer" className="flex-1 bg-[#0e1322] hover:bg-purple-950/50 text-center text-xs py-2 rounded-xl text-purple-300 border border-purple-900/50 transition">Backend</a>
                     ) : (
                       <span className="flex-1 bg-slate-900 text-slate-500 text-center text-xs py-2 rounded-xl cursor-not-allowed">N/A</span>
                     )}
 
-                    {project.liveLink ? (
+                    {project.title && project.title.toLowerCase().includes('volunteer') ? (
+                      <a href={project.liveLink} target="_blank" rel="noreferrer" className="flex-1 bg-purple-600 hover:bg-purple-500 text-center text-xs py-2 rounded-xl text-white transition shadow-md">Live Demo</a>
+                    ) : project.title && project.title.toLowerCase().includes('colab') ? (
+                      <a href="https://colab.research.google.com/drive/1QRSxLBsXwBQFJPeqSW_wRRq2qa9kDPnG?usp=sharing" target="_blank" rel="noreferrer" className="flex-1 bg-purple-600 hover:bg-purple-500 text-center text-xs py-2 rounded-xl text-white transition shadow-md">Google Colab</a>
+                    ) : project.liveLink ? (
                       <a href={project.liveLink} target="_blank" rel="noreferrer" className="flex-1 bg-purple-600 hover:bg-purple-500 text-center text-xs py-2 rounded-xl text-white transition shadow-md">Live Demo</a>
                     ) : (
                       <span className="flex-1 bg-slate-900 text-slate-500 text-center text-xs py-2 rounded-xl cursor-not-allowed">Colab / Video</span>
@@ -687,7 +725,6 @@ export default function Portfolio() {
         {activeTab === 'contact' && (
           <section className="bg-[#0e1322] border border-purple-900/40 rounded-3xl p-6 md:p-12 shadow-[0_0_30px_rgba(147,51,234,0.1)] max-w-7xl mx-auto w-full flex flex-col gap-10">
             
-            {/* Top Header Section */}
             <div className="text-center space-y-3">
               <p className="text-purple-400 font-bold text-xs uppercase tracking-widest">--- CONTACT ME ---</p>
               <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
@@ -699,13 +736,9 @@ export default function Portfolio() {
               </p>
             </div>
 
-            {/* Top Grid: "New Opportunities" & Contact Form */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               
-              {/* Left Column: "New Opportunities" & Get in Touch Card */}
               <div className="lg:col-span-5 flex flex-col gap-6">
-                
-                {/* New Opportunities Card */}
                 <div className="bg-[#131b2e] border border-purple-950/80 rounded-2xl p-6 md:p-8 shadow-xl relative overflow-hidden">
                   <div className="flex justify-between items-start mb-4">
                     <div>
@@ -733,14 +766,12 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                {/* Get in Touch Card */}
                 <div className="bg-[#131b2e] border border-purple-950/80 rounded-2xl p-6 md:p-8 shadow-xl flex flex-col gap-6">
                   <h3 className="text-xl font-extrabold text-white flex items-center gap-2">
                     Get in <span className="text-purple-400">Touch</span>
                   </h3>
 
                   <div className="flex flex-col gap-5">
-                    {/* Email */}
                     <div className="flex items-center gap-4">
                       <div className="w-11 h-11 rounded-xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-purple-400 flex-shrink-0">
                         📧
@@ -753,7 +784,6 @@ export default function Portfolio() {
                       </div>
                     </div>
 
-                    {/* Phone */}
                     <div className="flex items-center gap-4">
                       <div className="w-11 h-11 rounded-xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-purple-400 flex-shrink-0">
                         📞
@@ -764,7 +794,6 @@ export default function Portfolio() {
                       </div>
                     </div>
 
-                    {/* Location */}
                     <div className="flex items-center gap-4">
                       <div className="w-11 h-11 rounded-xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-purple-400 flex-shrink-0">
                         📍
@@ -775,7 +804,6 @@ export default function Portfolio() {
                       </div>
                     </div>
 
-                    {/* CodeChef */}
                     <div className="flex items-center gap-4">
                       <div className="w-11 h-11 rounded-xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-purple-400 flex-shrink-0">
                         &lt;/&gt;
@@ -792,7 +820,6 @@ export default function Portfolio() {
 
               </div>
 
-              {/* Right Column: Contact Form */}
               <div className="lg:col-span-7 bg-[#131b2e] border border-purple-950/80 rounded-2xl p-6 md:p-8 shadow-xl">
                 <h3 className="text-xl font-extrabold text-white mb-6">
                   Send Me a <span className="text-purple-400">Message</span>
@@ -865,10 +892,8 @@ export default function Portfolio() {
 
             </div>
 
-            {/* Bottom Section: Find Me Online & Quote / Quick Response Cards */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
               
-              {/* Find Me Online Box (With Official Full-Color Inline SVGs) */}
               <div className="lg:col-span-5 bg-[#131b2e] border border-purple-950/80 rounded-2xl p-6 shadow-xl">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-purple-400 block mb-4">FIND ME ONLINE</span>
                 <div className="flex items-center gap-3">
@@ -894,7 +919,6 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              {/* Quote & Quick Response Banner */}
               <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="bg-[#131b2e] border border-purple-950/80 rounded-2xl p-6 shadow-xl flex flex-col justify-between">
                   <p className="text-xs italic text-purple-200 font-medium">
