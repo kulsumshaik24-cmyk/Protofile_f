@@ -58,7 +58,9 @@ export default function Portfolio() {
   }, []);
 
   const fetchProjects = () => {
-    axios.get('http://localhost:5000/api/projects')
+    const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://protofile-x2ie.onrender.com';
+    
+    axios.get(`${API_BASE_URL}/api/projects`)
       .then(res => {
         const uniqueProjects = Array.from(
           new Map(res.data.map(proj => [proj.title, proj])).values()
@@ -103,7 +105,7 @@ export default function Portfolio() {
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 
       {/* Top Navbar */}
-      <nav className="flex justify-between items-center px-6 md:px-10 py-5 bg-[#0e1322]/80 backdrop-blur-md border-b border-purple-950/50 sticky top-0 z-50 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+      <nav className="flex justify-between items-center px-6 md:px-10 py-5 bg-[#0e1322]/85 backdrop-blur-md border-b border-purple-950/50 sticky top-0 z-50 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
         <div className="flex items-center gap-2.5 font-bold text-base text-white">
           <span className="bg-purple-600/30 border border-purple-500/50 px-2 py-1 rounded-lg text-purple-300 text-xs shadow-[0_0_10px_rgba(147,51,234,0.3)]">&lt;/&gt;</span> MyPortfolio
         </div>
@@ -575,7 +577,7 @@ export default function Portfolio() {
           </section>
         )}
 
-        {/* CONTACT VIEW (UPDATED WITH HEADER AND "NEW OPPORTUNITIES" CARD) */}
+        {/* CONTACT VIEW */}
         {activeTab === 'contact' && (
           <section className="bg-[#0e1322] border border-purple-900/40 rounded-3xl p-6 md:p-12 shadow-[0_0_30px_rgba(147,51,234,0.1)] max-w-7xl mx-auto w-full flex flex-col gap-10">
             
