@@ -48,10 +48,13 @@ export default function Portfolio() {
   const [newDesc, setNewDesc] = useState('');
   const [newFileUrl, setNewFileUrl] = useState('');
   const [isUploading, setIsUploading] = useState(false);
+  const [showQRModal, setShowQRModal] = useState(false);
 
   // Contact form state
   const [contactForm, setContactForm] = useState({ name: '', email: '', subject: '', message: '' });
   const [contactStatus, setContactStatus] = useState('');
+
+  const liveSiteUrl = 'https://protofile-f-five.vercel.app';
 
   useEffect(() => {
     fetchProjects();
@@ -98,7 +101,7 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="bg-[#080b14] min-h-screen text-slate-200 font-sans selection:bg-purple-600 selection:text-white pb-20 relative overflow-x-hidden">
+    <div className="bg-[#080b14] min-h-screen text-slate-200 font-sans selection:bg-purple-600 selection:text-white pb-28 relative overflow-x-hidden">
       
       {/* Background Ambient Glow Effects */}
       <div className="absolute top-1/4 left-10 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] pointer-events-none"></div>
@@ -119,7 +122,55 @@ export default function Portfolio() {
           <span onClick={() => setActiveTab('certificates')} className={`hover:text-purple-400 transition uppercase tracking-wider ${activeTab === 'certificates' ? 'text-purple-400 font-bold border-b-2 border-purple-500 pb-1' : ''}`}>CERTIFICATES</span>
           <span onClick={() => setActiveTab('contact')} className={`hover:text-purple-400 transition uppercase tracking-wider ${activeTab === 'contact' ? 'text-purple-400 font-bold border-b-2 border-purple-500 pb-1' : ''}`}>CONTACT</span>
         </div>
+        <button 
+          onClick={() => setShowQRModal(true)}
+          className="bg-purple-600/20 hover:bg-purple-600/40 border border-purple-500/50 text-purple-300 text-xs px-3.5 py-2 rounded-xl font-medium transition flex items-center gap-2 shadow-sm"
+        >
+          <span>📱</span> Open on Phone
+        </button>
       </nav>
+
+      {/* Mobile QR Code Modal Popup */}
+      {showQRModal && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-[#0e1322] border border-purple-500/50 rounded-3xl p-6 md:p-8 max-w-sm w-full text-center relative shadow-[0_0_50px_rgba(147,51,234,0.3)] animate-in fade-in zoom-in duration-200">
+            <button 
+              onClick={() => setShowQRModal(false)}
+              className="absolute top-4 right-4 w-8 h-8 rounded-full bg-purple-950/60 border border-purple-800/40 text-purple-300 flex items-center justify-center hover:bg-purple-900 transition"
+            >
+              ✕
+            </button>
+            <div className="w-12 h-12 rounded-2xl bg-purple-600/20 border border-purple-500/40 flex items-center justify-center mx-auto text-xl mb-3">
+              📱
+            </div>
+            <h3 className="text-lg font-extrabold text-white">Open on Your Phone</h3>
+            <p className="text-xs text-slate-400 mt-1 mb-5">
+              Scan this QR code with your mobile camera to instantly open your live portfolio.
+            </p>
+
+            <div className="bg-white p-4 rounded-2xl inline-block shadow-inner mb-5">
+              <img 
+                src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(liveSiteUrl)}`} 
+                alt="Portfolio QR Code" 
+                className="w-44 h-44 mx-auto rounded-lg"
+              />
+            </div>
+
+            <div className="bg-[#131b2e] border border-purple-950 p-2.5 rounded-xl text-[11px] text-purple-300 truncate select-all mb-4">
+              {liveSiteUrl}
+            </div>
+
+            <a 
+              href={liveSiteUrl} 
+              target="_blank" 
+              rel="noreferrer"
+              className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 text-white text-xs font-bold py-3 rounded-xl transition block shadow-md"
+            >
+              Open Live Link in New Tab ↗
+            </a>
+          </div>
+        </div>
+      )}
 
       {/* Main Container */}
       <div className="max-w-[1400px] mx-auto px-6 pt-10 flex flex-col gap-10 relative z-10">
@@ -145,7 +196,7 @@ export default function Portfolio() {
                   <p>🚀 <strong className="text-slate-300">Currently Exploring:</strong> Full-Stack Development, Artificial Intelligence, and Machine Learning</p>
                 </div>
 
-                {/* Social Media Logos Section */}
+                {/* Social Media Logos Section with Colorful Official Logos */}
                 <div className="flex items-center gap-4 mt-6">
                   <a 
                     href="https://github.com/kulsumshaik24-cmyk" 
@@ -154,7 +205,7 @@ export default function Portfolio() {
                     className="w-10 h-10 rounded-xl bg-[#131b2e] border border-purple-500/30 hover:border-purple-400 flex items-center justify-center p-2.5 transition-all duration-300 hover:scale-110 shadow-md group"
                     title="GitHub Profile"
                   >
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" className="w-full h-full filter invert group-hover:text-purple-400" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" className="w-full h-full filter invert group-hover:scale-105" />
                   </a>
 
                   <a 
@@ -164,7 +215,7 @@ export default function Portfolio() {
                     className="w-10 h-10 rounded-xl bg-[#131b2e] border border-purple-500/30 hover:border-purple-400 flex items-center justify-center p-2.5 transition-all duration-300 hover:scale-110 shadow-md group"
                     title="LinkedIn Profile"
                   >
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" className="w-full h-full filter invert group-hover:text-purple-400" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" className="w-full h-full" style={{ filter: 'none' }} />
                   </a>
 
                   <a 
@@ -174,12 +225,13 @@ export default function Portfolio() {
                     className="w-10 h-10 rounded-xl bg-[#131b2e] border border-purple-500/30 hover:border-purple-400 flex items-center justify-center p-2.5 transition-all duration-300 hover:scale-110 shadow-md group"
                     title="CodeChef Profile"
                   >
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/codechef.svg" alt="CodeChef" className="w-full h-full filter invert group-hover:text-purple-400" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/codechef.svg" alt="CodeChef" className="w-full h-full" style={{ filter: 'none' }} />
                   </a>
                 </div>
 
-                <div className="flex gap-4 mt-8">
+                <div className="flex gap-4 mt-8 flex-wrap">
                   <button onClick={() => setActiveTab('projects')} className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white px-6 py-3 rounded-full text-sm font-medium transition shadow-[0_0_20px_rgba(147,51,234,0.4)] flex items-center gap-2">View My Work ➔</button>
+                  <button onClick={() => setShowQRModal(true)} className="bg-[#131b2e] border border-purple-500/40 hover:bg-purple-950/50 text-purple-300 px-5 py-3 rounded-full text-sm font-medium transition flex items-center gap-2">📱 Scan for Phone</button>
                 </div>
               </div>
               
@@ -326,7 +378,7 @@ export default function Portfolio() {
           </div>
         )}
 
-        {/* SKILLS VIEW */}
+        {/* SKILLS VIEW (With Colorful Official Brand Logos) */}
         {activeTab === 'skills' && (
           <div className="bg-[#0e1322] border border-purple-900/40 rounded-3xl p-10 md:p-12 shadow-[0_0_30px_rgba(147,51,234,0.1)] max-w-6xl mx-auto w-full flex flex-col gap-10">
             <div>
@@ -351,8 +403,8 @@ export default function Portfolio() {
                     <div>
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded-lg bg-purple-950/50 border border-purple-500/30 flex items-center justify-center p-1.5">
-                            <img src={skill.icon} alt={skill.name} className="w-full h-full filter invert" />
+                          <div className="w-9 h-9 rounded-xl bg-[#080b14] border border-purple-500/20 flex items-center justify-center p-2 shadow-sm">
+                            <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain" style={{ filter: 'none' }} />
                           </div>
                           <h4 className="font-bold text-white text-sm">{skill.name}</h4>
                         </div>
@@ -762,7 +814,7 @@ export default function Portfolio() {
             {/* Bottom Section: Find Me Online & Quote / Quick Response Cards */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
               
-              {/* Find Me Online Box */}
+              {/* Find Me Online Box (With Colorful Brand Logos) */}
               <div className="lg:col-span-5 bg-[#131b2e] border border-purple-950/80 rounded-2xl p-6 shadow-xl">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-purple-400 block mb-4">FIND ME ONLINE</span>
                 <div className="flex items-center gap-3">
@@ -772,12 +824,12 @@ export default function Portfolio() {
                   </a>
 
                   <a href="https://www.linkedin.com/in/kulsum-shaik-a19276345/" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-xl bg-[#080b14] border border-purple-950 hover:border-purple-500/50 flex flex-col items-center justify-center p-2 transition group" title="LinkedIn">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" className="w-5 h-5 filter invert group-hover:scale-110 transition" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" className="w-5 h-5 group-hover:scale-110 transition" style={{ filter: 'none' }} />
                     <span className="text-[9px] text-slate-400 mt-1">LinkedIn</span>
                   </a>
 
                   <a href="https://www.codechef.com/users/bask_moles_15" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-xl bg-[#080b14] border border-purple-950 hover:border-purple-500/50 flex flex-col items-center justify-center p-2 transition group" title="CodeChef">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/codechef.svg" alt="CodeChef" className="w-5 h-5 filter invert group-hover:scale-110 transition" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/codechef.svg" alt="CodeChef" className="w-5 h-5 group-hover:scale-110 transition" style={{ filter: 'none' }} />
                     <span className="text-[9px] text-slate-400 mt-1">CodeChef</span>
                   </a>
 
