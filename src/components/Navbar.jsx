@@ -13,5 +13,5 @@ export default function Navbar() {
         <a href="#contact" className="hover:text-blue-500">Contact</a>
       </div>
     </nav>
-  );
+  ); 
 }
