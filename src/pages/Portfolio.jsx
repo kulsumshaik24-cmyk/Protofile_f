@@ -196,7 +196,7 @@ export default function Portfolio() {
                   <p>🚀 <strong className="text-slate-300">Currently Exploring:</strong> Full-Stack Development, Artificial Intelligence, and Machine Learning</p>
                 </div>
 
-                {/* Social Media Logos Section with Colorful Official Logos */}
+                {/* Social Media Logos Section with Official Full-Color Badges */}
                 <div className="flex items-center gap-4 mt-6">
                   <a 
                     href="https://github.com/kulsumshaik24-cmyk" 
@@ -205,7 +205,7 @@ export default function Portfolio() {
                     className="w-10 h-10 rounded-xl bg-[#131b2e] border border-purple-500/30 hover:border-purple-400 flex items-center justify-center p-2.5 transition-all duration-300 hover:scale-110 shadow-md group"
                     title="GitHub Profile"
                   >
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" className="w-full h-full filter invert group-hover:scale-105" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" className="w-full h-full group-hover:scale-105" style={{ filter: 'invert(1)' }} />
                   </a>
 
                   <a 
@@ -215,7 +215,7 @@ export default function Portfolio() {
                     className="w-10 h-10 rounded-xl bg-[#131b2e] border border-purple-500/30 hover:border-purple-400 flex items-center justify-center p-2.5 transition-all duration-300 hover:scale-110 shadow-md group"
                     title="LinkedIn Profile"
                   >
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" className="w-full h-full" style={{ filter: 'none' }} />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" className="w-full h-full" style={{ filter: 'invert(22%) sepia(98%) saturate(7460%) hue-rotate(202deg) brightness(97%) contrast(101%)' }} />
                   </a>
 
                   <a 
@@ -225,7 +225,7 @@ export default function Portfolio() {
                     className="w-10 h-10 rounded-xl bg-[#131b2e] border border-purple-500/30 hover:border-purple-400 flex items-center justify-center p-2.5 transition-all duration-300 hover:scale-110 shadow-md group"
                     title="CodeChef Profile"
                   >
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/codechef.svg" alt="CodeChef" className="w-full h-full" style={{ filter: 'none' }} />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/codechef.svg" alt="CodeChef" className="w-full h-full" style={{ filter: 'invert(52%) sepia(85%) saturate(464%) hue-rotate(345deg) brightness(94%) contrast(92%)' }} />
                   </a>
                 </div>
 
@@ -378,7 +378,7 @@ export default function Portfolio() {
           </div>
         )}
 
-        {/* SKILLS VIEW (Explicitly Colored Logos) */}
+        {/* SKILLS VIEW (With Official Full-Color Brand Logos & Filters) */}
         {activeTab === 'skills' && (
           <div className="bg-[#0e1322] border border-purple-900/40 rounded-3xl p-10 md:p-12 shadow-[0_0_30px_rgba(147,51,234,0.1)] max-w-6xl mx-auto w-full flex flex-col gap-10">
             <div>
@@ -389,22 +389,85 @@ export default function Portfolio() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
                 {[
-                  { name: 'HTML5', desc: 'Semantic markup & layout structure', level: '90%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg', color: '#E34F26' },
-                  { name: 'CSS3', desc: 'Styling, flexbox, grid & animations', level: '88%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/css3.svg', color: '#1572B6' },
-                  { name: 'JavaScript', desc: 'Dynamic client-side scripting', level: '85%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg', color: '#F7DF1E' },
-                  { name: 'Python', desc: 'Core logic, scripting & backend logic', level: '90%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg', color: '#3776AB' },
-                  { name: 'C Programming', desc: 'Foundational programming & algorithms', level: '90%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/c.svg', color: '#A8B9CC' },
-                  { name: 'Java', desc: 'Object-oriented programming', level: '85%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/openjdk.svg', color: '#ED8B00' },
-                  { name: 'SQL', desc: 'Relational database management', level: '85%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg', color: '#4479A1' },
-                  { name: 'MERN Stack', desc: 'MongoDB, Express, React, Node.js', level: '85%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/react.svg', color: '#61DAFB' },
-                  { name: 'Generative AI', desc: 'AI models, prompt engineering & APIs', level: '85%', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/openai.svg', color: '#412991' }
+                  { 
+                    name: 'HTML5', 
+                    desc: 'Semantic markup & layout structure', 
+                    level: '90%', 
+                    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg', 
+                    color: '#E34F26',
+                    filter: 'invert(37%) sepia(87%) saturate(2250%) hue-rotate(345deg) brightness(97%) contrast(93%)' 
+                  },
+                  { 
+                    name: 'CSS3', 
+                    desc: 'Styling, flexbox, grid & animations', 
+                    level: '88%', 
+                    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/css3.svg', 
+                    color: '#1572B6',
+                    filter: 'invert(35%) sepia(93%) saturate(1471%) hue-rotate(182deg) brightness(96%) contrast(94%)' 
+                  },
+                  { 
+                    name: 'JavaScript', 
+                    desc: 'Dynamic client-side scripting', 
+                    level: '85%', 
+                    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg', 
+                    color: '#F7DF1E',
+                    filter: 'invert(87%) sepia(43%) saturate(1312%) hue-rotate(352deg) brightness(102%) contrast(97%)' 
+                  },
+                  { 
+                    name: 'Python', 
+                    desc: 'Core logic, scripting & backend logic', 
+                    level: '90%', 
+                    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg', 
+                    color: '#3776AB',
+                    filter: 'invert(40%) sepia(51%) saturate(735%) hue-rotate(176deg) brightness(93%) contrast(91%)' 
+                  },
+                  { 
+                    name: 'C Programming', 
+                    desc: 'Foundational programming & algorithms', 
+                    level: '90%', 
+                    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/c.svg', 
+                    color: '#A8B9CC',
+                    filter: 'invert(75%) sepia(11%) saturate(738%) hue-rotate(172deg) brightness(91%) contrast(89%)' 
+                  },
+                  { 
+                    name: 'Java', 
+                    desc: 'Object-oriented programming', 
+                    level: '85%', 
+                    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/openjdk.svg', 
+                    color: '#ED8B00',
+                    filter: 'invert(53%) sepia(88%) saturate(1512%) hue-rotate(1deg) brightness(99%) contrast(98%)' 
+                  },
+                  { 
+                    name: 'SQL', 
+                    desc: 'Relational database management', 
+                    level: '85%', 
+                    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg', 
+                    color: '#4479A1',
+                    filter: 'invert(42%) sepia(48%) saturate(543%) hue-rotate(172deg) brightness(93%) contrast(92%)' 
+                  },
+                  { 
+                    name: 'MERN Stack', 
+                    desc: 'MongoDB, Express, React, Node.js', 
+                    level: '85%', 
+                    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/react.svg', 
+                    color: '#61DAFB',
+                    filter: 'invert(79%) sepia(40%) saturate(1915%) hue-rotate(159deg) brightness(101%) contrast(97%)' 
+                  },
+                  { 
+                    name: 'Generative AI', 
+                    desc: 'AI models, prompt engineering & APIs', 
+                    level: '85%', 
+                    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/openai.svg', 
+                    color: '#412991',
+                    filter: 'invert(20%) sepia(74%) saturate(2250%) hue-rotate(240deg) brightness(89%) contrast(94%)' 
+                  }
                 ].map((skill, index) => (
                   <div key={index} className="bg-[#131b2e] border border-purple-950/80 rounded-2xl p-5 flex flex-col justify-between shadow-md">
                     <div>
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-3">
                           <div className="w-9 h-9 rounded-xl bg-[#080b14] border border-purple-500/20 flex items-center justify-center p-2 shadow-sm">
-                            <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain" style={{ filter: 'none' }} />
+                            <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain" style={{ filter: skill.filter }} />
                           </div>
                           <h4 className="font-bold text-white text-sm">{skill.name}</h4>
                         </div>
@@ -814,22 +877,22 @@ export default function Portfolio() {
             {/* Bottom Section: Find Me Online & Quote / Quick Response Cards */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
               
-              {/* Find Me Online Box (With Colorful Brand Logos) */}
+              {/* Find Me Online Box (With Official Full-Color Brand Logos) */}
               <div className="lg:col-span-5 bg-[#131b2e] border border-purple-950/80 rounded-2xl p-6 shadow-xl">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-purple-400 block mb-4">FIND ME ONLINE</span>
                 <div className="flex items-center gap-3">
                   <a href="https://github.com/kulsumshaik24-cmyk" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-xl bg-[#080b14] border border-purple-950 hover:border-purple-500/50 flex flex-col items-center justify-center p-2 transition group" title="GitHub">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" className="w-5 h-5 filter invert group-hover:scale-110 transition" />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" className="w-5 h-5 group-hover:scale-110 transition" style={{ filter: 'invert(1)' }} />
                     <span className="text-[9px] text-slate-400 mt-1">GitHub</span>
                   </a>
 
                   <a href="https://www.linkedin.com/in/kulsum-shaik-a19276345/" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-xl bg-[#080b14] border border-purple-950 hover:border-purple-500/50 flex flex-col items-center justify-center p-2 transition group" title="LinkedIn">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" className="w-5 h-5 group-hover:scale-110 transition" style={{ filter: 'none' }} />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" className="w-5 h-5 group-hover:scale-110 transition" style={{ filter: 'invert(22%) sepia(98%) saturate(7460%) hue-rotate(202deg) brightness(97%) contrast(101%)' }} />
                     <span className="text-[9px] text-slate-400 mt-1">LinkedIn</span>
                   </a>
 
                   <a href="https://www.codechef.com/users/bask_moles_15" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-xl bg-[#080b14] border border-purple-950 hover:border-purple-500/50 flex flex-col items-center justify-center p-2 transition group" title="CodeChef">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/codechef.svg" alt="CodeChef" className="w-5 h-5 group-hover:scale-110 transition" style={{ filter: 'none' }} />
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/codechef.svg" alt="CodeChef" className="w-5 h-5 group-hover:scale-110 transition" style={{ filter: 'invert(52%) sepia(85%) saturate(464%) hue-rotate(345deg) brightness(94%) contrast(92%)' }} />
                     <span className="text-[9px] text-slate-400 mt-1">CodeChef</span>
                   </a>
 
