@@ -31,14 +31,14 @@ export default function Portfolio({ activeTab, setActiveTab }) {
       title: 'Cambridge English Spoken Skills Certificate', 
       category: 'Communication', 
       desc: 'Professional English communication and interpersonal skills verification.', 
-      fileUrl: '#' 
+      fileUrl: 'https://drive.google.com/file/d/1OkY896i2Is6-jmLYD_jgwfsMFucHOgFw/view?usp=sharing' 
     },
     { 
       id: 5, 
       title: 'AWS Workshop Certificate', 
       category: 'Cloud & Tech', 
       desc: 'Cloud computing fundamentals and architecture deployment.', 
-      fileUrl: '#' 
+      fileUrl: '' 
     }
   ]);
 
