@@ -38,7 +38,7 @@ export default function Portfolio({ activeTab, setActiveTab }) {
       title: 'AWS Workshop Certificate', 
       category: 'Cloud & Tech', 
       desc: 'Cloud computing fundamentals and architecture deployment.', 
-      fileUrl: '' 
+      fileUrl: 'https://drive.google.com/file/d/1AMPi5PY2o7N1yIlHlMZ1aqE8nerLtx6r/view?usp=sharing' 
     }
   ]);
 
