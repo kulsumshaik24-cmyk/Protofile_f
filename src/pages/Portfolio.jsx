@@ -10,35 +10,35 @@ export default function Portfolio({ activeTab, setActiveTab }) {
       title: 'Google Developer Hackathon Certificate', 
       category: 'Hackathon & Leadership', 
       desc: 'Certificate of participation and leadership in the Google hackathon event.', 
-      fileUrl: 'https://drive.google.com/file/d/15UFyBj9m3XlYhA1hGxWRRqiPCTm62RSF/view?usp=sharing' 
+      fileUrl: 'https://drive.google.com/uc?export=view&id=15UFyBj9m3XlYhA1hGxWRRqiPCTm62RSF' 
     },
     { 
       id: 2, 
       title: 'Purplane Certificate', 
       category: 'Workshop & Tech', 
       desc: 'Professional participation and completion certificate from Purplane.', 
-      fileUrl: 'https://drive.google.com/file/d/1V8OV4Pp0R-wAUU7oTodKYnd34o9JBvoY/view?usp=sharing' 
+      fileUrl: 'https://drive.google.com/uc?export=view&id=1V8OV4Pp0R-wAUU7oTodKYnd34o9JBvoY' 
     },
     { 
       id: 3, 
       title: 'Internship Completion Certificate', 
       category: 'Internship', 
       desc: 'Hands-on practical experience and project development internship completion.', 
-      fileUrl: 'https://drive.google.com/file/d/1r3U4XoOPtGy1KSuE_OT2ZyfCthUicP-Y/view?usp=sharing' 
+      fileUrl: 'https://drive.google.com/uc?export=view&id=1r3U4XoOPtGy1KSuE_OT2ZyfCthUicP-Y' 
     },
     { 
       id: 4, 
       title: 'Cambridge English Spoken Skills Certificate', 
       category: 'Communication', 
       desc: 'Professional English communication and interpersonal skills verification.', 
-      fileUrl: 'https://drive.google.com/file/d/1OkY896i2Is6-jmLYD_jgwfsMFucHOgFw/view?usp=sharing' 
+      fileUrl: 'https://drive.google.com/uc?export=view&id=1OkY896i2Is6-jmLYD_jgwfsMFucHOgFw' 
     },
     { 
       id: 5, 
       title: 'AWS Workshop Certificate', 
       category: 'Cloud & Tech', 
       desc: 'Cloud computing fundamentals and architecture deployment.', 
-      fileUrl: 'https://drive.google.com/file/d/1AMPi5PY2o7N1yIlHlMZ1aqE8nerLtx6r/view?usp=sharing' 
+      fileUrl: 'https://drive.google.com/uc?export=view&id=1AMPi5PY2o7N1yIlHlMZ1aqE8nerLtx6r' 
     }
   ]);
 
