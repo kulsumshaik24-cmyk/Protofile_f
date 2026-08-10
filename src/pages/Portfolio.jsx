@@ -3,6 +3,7 @@ import axios from 'axios';
 
 export default function Portfolio({ activeTab, setActiveTab }) {
   const [projects, setProjects] = useState([]);
+
   
   const [certificates, setCertificates] = useState([
     { 
